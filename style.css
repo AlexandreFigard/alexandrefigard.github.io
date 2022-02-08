@@ -1,0 +1,255 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /* flex-wrap: nowrap; */
+}
+.titre {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+
+/* ACCUEIL */
+#accueil {
+	background-color: #001524f8;
+}
+#accueil .accueil {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: right;
+}
+#accueil h1 {
+	display: block;
+	width: fit-content;
+	font-size: 10vh;
+	position: relative;
+	color: white;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+	margin-left: 20px;
+}
+
+.background_img{
+	position: relative;
+	opacity: 1;
+	max-width: 50vh;
+	max-height: 50vh;
+	border-radius: 50%;
+}
+
+.rounded_dark{
+	max-height: 90vh;
+	max-width: 90vh;
+	background-color: #83838373;
+	border-radius: 50%;
+}
+
+/* NAVBAR */
+
+.navbar{
+	background-color: #071b2a;
+}
+
+.navbar .logo{
+	height: 5vh;
+	width: 5vh;
+	border-radius: 50%;
+	float: left;
+}
+
+.navbar ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: transparent;
+	position: fixed;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	background-color: #071b2a;
+	z-index: 1000;
+}
+
+.navbar li:not(.logo) {
+	float: right;
+}
+
+.navbar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar li a:hover {
+	color: #0077ff;
+}
+
+/* projet */
+
+#projet .card{
+	margin: 10px;
+	width: 35vh;
+	height: 35vh;
+	position: relative;
+	/* background-color: #999999; */
+	background-image: url(./images/bg_card.jpg);
+	border-radius: 7%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+#projet .card::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgb(0, 0, 0);
+	opacity: 0.7;
+	z-index: -1;
+}
+
+#projet .card h1{
+	margin-top: 1.5vh;
+	margin-bottom: 5vh;
+	margin-left: 1vh;
+	font-size: 5rem;
+	color: white;
+}
+
+#projet .card p{
+	margin-top: 1.5vh;
+	margin-bottom: 5vh;
+	margin-left: 1vh;
+	font-size: 1.5rem;
+	color: white;
+}
+
+#projet .projet_haut{
+	max-width: 500px;
+	margin: 0 auto;
+}
+#projet .projet_bas{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+/* SCROLL BAR */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #e2e2e2 #071b2a;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #071b2a;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e2e2e2;
+    border-radius: 3px;
+    border: 0px dashed #e2e2e2;
+  }
+
+  /* Services Section */
+#services .services {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#services .service-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#services .service-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#services .service-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#services .service-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#services .service-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#services .service-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#services .service-item p {
+	color: white;
+	text-align: left;
+}
+/* End Services Section */
